@@ -1,7 +1,7 @@
 import requests
 
 def message_split(message):
-    request=message.text.split()
+    request=message.split()
     list_length=len(request)
     id=int(request[list_length-1])
     request.pop()
