@@ -1,5 +1,3 @@
-
-import asyncio
 import logging
 
 from telegram import Update
