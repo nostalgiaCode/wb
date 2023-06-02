@@ -14,12 +14,10 @@ logger = logging.getLogger(__name__)
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(searchwb(update.message.text))
 
-
 def main() -> None:
     application = Application.builder().token(api_key).build()
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
     application.run_polling()
-
 
 if __name__ == "__main__":
     main()
